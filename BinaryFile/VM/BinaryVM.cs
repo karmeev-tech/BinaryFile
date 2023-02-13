@@ -1,11 +1,12 @@
 ﻿using BinaryFile.VM.Commands;
+using BinaryModel;
 using System.Windows;
 using System.Windows.Input;
 
 namespace BinaryFile.VM
 {
 #nullable disable
-    internal class BinaryVM : ViewModelBase
+    internal class BinaryVM : ViewModelBase, IVMContract
     {
         public BinaryVM()
         {
