@@ -6,7 +6,7 @@ namespace Tests
     /// Class for speed checking.
     /// </summary>
     /// <returns></returns>
-    internal class OrganizerExtendet : Organizer
+    internal class OrganizerExtended : Organizer
     {
         public string GetFullString()
         {
@@ -31,7 +31,12 @@ namespace Tests
             await tasks[2];
             return GetBytes(tasks);
         }
-
+        protected string GetBytes(List<Task> tasks)
+        {
+            Task complete = Task.WhenAll(tasks);
+            complete.Wait();
+            return GetProduct();
+        }
         public void Test_SyncGetter(string path, long position)
         {
             GetPart(path, position);

@@ -15,9 +15,9 @@ namespace BinaryFile.VM.Commands
             //OpenFileDialog openFileDialogue = new();
             //openFileDialogue.ShowDialog();
             // u must get openFileDialogue.FileName; test must be delete
-            string test = @"E:\systemfolder\1\mgpt_xl.zip";
-            FileManager fileManager = new(_viewModel,test);
-            await fileManager.GetFile();
+            const string test = @"E:\systemfolder\1\mgpt_xl.zip";
+            await new FileManager(_viewModel,test).GetFile();
+            _viewModel.Position += 10;
         }
     }
 }

@@ -3,7 +3,7 @@
     public class Organizer : Provider
     {
         private readonly FileGetter _fg = new();
-        public string _fileBytes = null!;
+        private string _fileBytes = "";
 
         public override string GetProduct()
         {
@@ -14,30 +14,21 @@
         {
             await StartGetter(path, position);
         }
-
-        public override void CleanResources()
+        public override Task MakeRequest(string path, long position)
         {
-            _fileBytes = null;
+            StartGetter(path, position);
+            return Task.CompletedTask;
         }
-
-        protected virtual async Task<string> StartGetter(string path, long position)
+        protected virtual Task StartGetter(string path, long position)
         {
-            List<Task> tasks = new()
-            {
-                GetPart(path, position)
-            };
-            await tasks[0];
-            return GetBytes(tasks);
-        }
-        protected string GetBytes(List<Task> tasks)
-        {
-            Task complete = Task.WhenAll(tasks);
-            complete.Wait();
-            return _fileBytes;
+            GetPart(path, position);
+            return Task.CompletedTask;
         }
         protected Task GetPart(string path, long position)
         {
             _fileBytes = _fg.GetFile(path, position).ToString();
+            Bytes = _fg._bytes;
+            StringValue = new ByteConverter(_fg._bytes);
             return Task.CompletedTask;
         }
     }

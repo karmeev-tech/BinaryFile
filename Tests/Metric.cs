@@ -24,7 +24,7 @@ namespace Tests
                 Stopwatch stopwatch = new();
                 stopwatch.Start();
                 long position = 1024 * 1024 * 10;
-                OrganizerExtendet organizer = new();
+                OrganizerExtended organizer = new();
                 Task testTask = organizer.MakeRequestAsync(_path, position);
                 testTask.Wait();
                 stopwatch.Stop();
@@ -40,7 +40,7 @@ namespace Tests
             Stopwatch stopwatch = new();
             stopwatch.Start();
             long position = 1024 * 1024 * 10;
-            OrganizerExtendet organizer = new();
+            OrganizerExtended organizer = new();
             organizer.Test_SyncGetter(_path, position);
             stopwatch.Stop();
             _resultTime = stopwatch.ElapsedMilliseconds;
