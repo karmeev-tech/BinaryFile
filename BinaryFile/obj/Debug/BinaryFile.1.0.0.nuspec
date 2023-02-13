@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>BinaryFile</id>
+    <version>1.0.0</version>
+    <authors>BinaryFile</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net7.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net7.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="E:\work\projects\BinaryFile\BinaryFile\bin\Debug\net7.0-windows\BinaryFile.runtimeconfig.json" target="lib\net7.0-windows7.0\BinaryFile.runtimeconfig.json" />
+    <file src="E:\work\projects\BinaryFile\BinaryFile\bin\Debug\net7.0-windows\BinaryFile.dll" target="lib\net7.0-windows7.0\BinaryFile.dll" />
+  </files>
+</package>

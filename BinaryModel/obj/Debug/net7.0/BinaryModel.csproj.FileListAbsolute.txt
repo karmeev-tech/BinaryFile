@@ -1,0 +1,15 @@
+E:\work\projects\BinaryFile\BinaryModel\bin\Debug\net7.0\BinaryModel.exe
+E:\work\projects\BinaryFile\BinaryModel\bin\Debug\net7.0\BinaryModel.deps.json
+E:\work\projects\BinaryFile\BinaryModel\bin\Debug\net7.0\BinaryModel.runtimeconfig.json
+E:\work\projects\BinaryFile\BinaryModel\bin\Debug\net7.0\BinaryModel.dll
+E:\work\projects\BinaryFile\BinaryModel\bin\Debug\net7.0\BinaryModel.pdb
+E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\BinaryModel.csproj.AssemblyReference.cache
+E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\BinaryModel.GeneratedMSBuildEditorConfig.editorconfig
+E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\BinaryModel.AssemblyInfoInputs.cache
+E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\BinaryModel.AssemblyInfo.cs
+E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\BinaryModel.csproj.CoreCompileInputs.cache
+E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\BinaryModel.dll
+E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\refint\BinaryModel.dll
+E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\BinaryModel.pdb
+E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\BinaryModel.genruntimeconfig.cache
+E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\ref\BinaryModel.dll
