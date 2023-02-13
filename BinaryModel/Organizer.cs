@@ -2,9 +2,8 @@
 {
     public class Organizer : Provider
     {
-#nullable disable
         private readonly FileGetter _fg = new();
-        public string _fileBytes;
+        public string _fileBytes = null!;
 
         public override string GetProduct()
         {

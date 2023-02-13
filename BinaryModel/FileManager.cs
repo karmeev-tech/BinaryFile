@@ -7,61 +7,39 @@ namespace BinaryModel
 {
     public class FileManager
     {
-        readonly Organizer _manager = new();
-        readonly Organizer _manager2 = new();
-        readonly Organizer _manager3 = new();
+        readonly Provider _provider = new Organizer();
+        // readonly Provider _provider2 = new Organizer();
+        // readonly Provider _provider3 = new Organizer();
+        public string _filePath;
         readonly IVMContract _vm;
 
-        public FileManager(IVMContract vm)
+        public FileManager(IVMContract vm, string filePath)
         {
             _vm = vm;
+            _filePath = filePath;
         }
 
-        public async void GetFile()
+        public async Task GetFile()
         {
-            Provider provider = _manager;
-            Provider provider2 = _manager2;
-            Provider provider3 = _manager3;
-
-#region real
-            ///<summary>
-            /// Реализация для программы ниже
-            /// </summary>
-
-            //OpenFileDialog openFileDialogue = new();
-            //openFileDialogue.ShowDialog();
-
-            //Task[] tasks = new Task[]
-            //{
-            //    provider.MakeRequestAsync(openFileDialogue.FileName, _vm.Position),
-            //    provider2.MakeRequestAsync(openFileDialogue.FileName, _vm.Position + 1024 * 2),
-            //    provider3.MakeRequestAsync(openFileDialogue.FileName, _vm.Position + 1024 * 3)
-            //};
-#endregion
-
-            ///<summary>
-            /// Заготовка для тестирования больших файлов. Удаляем после цикла разработки
-            /// </summary>
-
             Task[] tasks = new Task[]
             {
-                provider.MakeRequestAsync(@"E:\systemfolder\1\mgpt_xl.zip", _vm.Position),
-                provider2.MakeRequestAsync(@"E:\systemfolder\1\mgpt_xl.zip", _vm.Position + 1024 * 2),
-                provider3.MakeRequestAsync(@"E:\systemfolder\1\mgpt_xl.zip", _vm.Position + 1024 * 3)
+                _provider.MakeRequestAsync(_filePath, _vm.Position),
+                // provider2.MakeRequestAsync(_filePath, _vm.Position + 1024 * 2),
+                // provider3.MakeRequestAsync(_filePath, _vm.Position + 1024 * 3)
             };
             await Task.WhenAll(tasks);
-            Update(provider, provider2, provider3);
+            //Update(_provider, _provider2, _provider3);
         }
 
-        private void Update(Provider provider, Provider provider2, Provider provider3)
-        {
-            // _viewModel.TopSource = provider.GetProduct();
-            // _viewModel.MiddleSource = provider2.GetProduct();
-            // _viewModel.BottomSource = provider3.GetProduct();
+        // private void Update(Provider provider, Provider provider2, Provider provider3)
+        // {
+        //     // _viewModel.TopSource = provider.GetProduct();
+        //     // _viewModel.MiddleSource = provider2.GetProduct();
+        //     // _viewModel.BottomSource = provider3.GetProduct();
 
-            provider.CleanResources();
-            provider2.CleanResources();
-            provider3.CleanResources();
-        }
+        //     provider.CleanResources();
+        //     provider2.CleanResources();
+        //     provider3.CleanResources();
+        // }
     }
 }

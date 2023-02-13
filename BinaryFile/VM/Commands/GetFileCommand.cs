@@ -12,7 +12,12 @@ namespace BinaryFile.VM.Commands
 
         public override async void Execute(object parameter)
         {
-            FileManager fileManager = new(_viewModel);
+            //OpenFileDialog openFileDialogue = new();
+            //openFileDialogue.ShowDialog();
+            // u must get openFileDialogue.FileName; test must be delete
+            string test = @"E:\systemfolder\1\mgpt_xl.zip";
+            FileManager fileManager = new(_viewModel,test);
+            await fileManager.GetFile();
         }
     }
 }

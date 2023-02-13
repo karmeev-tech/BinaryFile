@@ -23,6 +23,5 @@ namespace BinaryFile.VM.Commands
         {
             CanExecuteChanged?.Invoke(this, new EventArgs());
         }
-    
     }
 }
