@@ -15,9 +15,11 @@ namespace BinaryFile.VM.Commands
             //OpenFileDialog openFileDialogue = new();
             //openFileDialogue.ShowDialog();
             // u must get openFileDialogue.FileName; test must be delete
+            const int times = 10;
             const string test = @"E:\systemfolder\1\mgpt_xl.zip";
-            await new FileManager(_viewModel,test).GetFile();
-            _viewModel.Position += 10;
+            await new FileManager(_viewModel,test,times).GetFile();
+            //подключаем VM хранилище сюда
+            _viewModel.Position += times;
         }
     }
 }

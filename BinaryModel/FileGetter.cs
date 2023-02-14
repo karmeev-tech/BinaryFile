@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using Microsoft.Extensions.Primitives;
 
 namespace BinaryModel
 {
@@ -14,8 +15,8 @@ namespace BinaryModel
                 reader.BaseStream.Position = position;
                 byte[] data = reader.ReadBytes(10);
                 _bytes = data;
-                sb.Append(string.Join(" ", data));
-                stream.Flush();
+                sb.AppendJoin(" ", BitConverter.ToString(data));
+                stream.Flush();//IDispose
                 reader.Close();
             }
             return sb;

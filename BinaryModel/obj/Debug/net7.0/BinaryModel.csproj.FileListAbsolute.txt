@@ -13,3 +13,5 @@ E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\refint\BinaryModel.dll
 E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\BinaryModel.pdb
 E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\BinaryModel.genruntimeconfig.cache
 E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\ref\BinaryModel.dll
+E:\work\projects\BinaryFile\BinaryModel\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+E:\work\projects\BinaryFile\BinaryModel\obj\Debug\net7.0\BinaryModel.csproj.CopyComplete

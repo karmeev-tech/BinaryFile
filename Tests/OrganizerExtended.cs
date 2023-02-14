@@ -13,7 +13,7 @@ namespace Tests
             return GetProduct();
         }
 
-        public override async Task MakeRequestAsync(string path, long position)
+        public async Task MakeRequestAsync(string path, long position)
         {
             await StartGetter(path, position);
         }

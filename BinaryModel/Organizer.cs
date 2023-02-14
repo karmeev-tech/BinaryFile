@@ -1,5 +1,8 @@
 ﻿namespace BinaryModel
 {
+    /// <summary>
+    /// This class can be extended for getting more bytes in one time
+    /// </summary>
     public class Organizer : Provider
     {
         private readonly FileGetter _fg = new();
@@ -8,11 +11,6 @@
         public override string GetProduct()
         {
             return _fileBytes;
-        }
-
-        public override async Task MakeRequestAsync(string path, long position)
-        {
-            await StartGetter(path, position);
         }
         public override Task MakeRequest(string path, long position)
         {
@@ -26,9 +24,8 @@
         }
         protected Task GetPart(string path, long position)
         {
-            _fileBytes = _fg.GetFile(path, position).ToString();
-            Bytes = _fg._bytes;
-            StringValue = new ByteConverter(_fg._bytes);
+            _fileBytes = _fg.GetFile(path, position).ToString();//16bit
+            StringValue = System.Text.Encoding.Unicode.GetString(_fg._bytes);//Unicode
             return Task.CompletedTask;
         }
     }
