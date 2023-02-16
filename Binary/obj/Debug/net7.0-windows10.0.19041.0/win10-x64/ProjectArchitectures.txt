@@ -1,1 +1,0 @@
-E:\work\projects\BinaryFile\Binary\Binary.csproj;x64
