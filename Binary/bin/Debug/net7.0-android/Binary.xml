@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Binary</name>
+    </assembly>
+    <members>
+        <member name="T:Binary.Model.Organizer">
+            <summary>
+            This class can be extended for getting more bytes in one time
+            </summary>
+        </member>
+    </members>
+</doc>

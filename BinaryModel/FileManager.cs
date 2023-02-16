@@ -1,38 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace BinaryModel
 {
     public class FileManager
     {
-        private readonly Provider _provider = new Organizer();
-        private readonly IVMContract _vm;
-        private readonly int _times;
-        public string _filePath;
-        public List<BasicEntity> _basicEntities = new();
-        public FileManager(IVMContract vm, string filePath, int times)
+        public FileManager(IVMContract viewModel) 
         {
-            _vm = vm;
-            _filePath = filePath;
-            _times = times;
+            ViewModel = viewModel;
         }
 
-        public Task GetFile()
+        EntityService _fm;
+        public IVMContract ViewModel { get; }
+
+        public void GetFile(bool UpDown)
         {
-            for (int times = 0; times <= _times; times++)
+            if(UpDown)
             {
-                _provider.MakeRequest(_filePath, _vm.Position+times);
-                BasicEntity entity = CreateEntity(_vm.Position+times);
-                _basicEntities.Add(entity);
+                ViewModel.Position -= 100;
             }
-            return Task.CompletedTask;
+            _fm = new(ViewModel, ViewModel.FilePath, ViewModel.Times);
+            Task task = new(_fm.FileRequest);
+            Task task2 = task.ContinueWith(Update);
+            task.Start();
         }
-
-        private BasicEntity CreateEntity(int position)
+        void Update(Task t)
         {
-            return new BasicEntity()
-            {
-                StringRepresentation = _provider.StringValue,
-                Bytes = _provider.GetProduct(),
-                Position = "0x" + BitConverter.ToString(BitConverter.GetBytes(position)).Replace("-","")
-            };
+            ViewModel.Position += ViewModel.Times;
+            ViewModel.BasicEntities = _fm._basicEntities;
         }
     }
 }

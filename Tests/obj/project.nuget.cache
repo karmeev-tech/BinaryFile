@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dHkmAa+7Lc/NGvf09tpHLbAICQpT72OTeEGKQP2sW8plULP+rNiae6lk6cptmG9EB5IG5qnloKAUxZpp/vFQyQ==",
+  "dgSpecHash": "nZwyphDP6gZn4Zes/jX7P3cO5uhSwD5WjtLcd/DV0OvAy3YEEKGJ4p1ApWCjEM9FEPLcF2bEQtdBPNnl5gjGxw==",
   "success": true,
   "projectFilePath": "E:\\work\\projects\\BinaryFile\\Tests\\Tests.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Kuririn\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

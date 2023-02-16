@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Binary.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:model="clr-namespace:Binary.Model"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Binary.VM"
+             xmlns:controls="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             >
+    <ContentPage.BindingContext>
+        <viewmodel:BinaryVM/>
+    </ContentPage.BindingContext>
+
+    <ScrollView BackgroundColor="#262626" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Always">
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Button StyleClass="FilledButton" Command="{Binding GetFile}" Text="Open file" TextColor="#000000"/>
+
+            <controls:DataGrid ItemsSource="{Binding BasicEntities}" extensionsNamespace:DataGridExtensions.ScrollChangedCommand="{Binding ScrollCommand}" BackgroundColor="#262626" HorizontalOptions="Center" UseAutoColumns="True" Margin="30"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

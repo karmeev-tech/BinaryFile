@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFile", "BinaryFile\BinaryFile.csproj", "{A44BBFEB-E7CF-4861-9455-AD68E5A285E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinaryFile", "BinaryFile\BinaryFile.csproj", "{A44BBFEB-E7CF-4861-9455-AD68E5A285E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryModel", "BinaryModel\BinaryModel.csproj", "{7952448B-5A92-44DF-B70E-E5061FC7E811}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinaryModel", "BinaryModel\BinaryModel.csproj", "{7952448B-5A92-44DF-B70E-E5061FC7E811}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{59015946-399C-4E98-98C6-310355DAD3D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{59015946-399C-4E98-98C6-310355DAD3D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -19,3 +19,4 @@ E:\work\projects\BinaryFile\Tests\obj\Debug\net7.0\refint\Tests.dll
 E:\work\projects\BinaryFile\Tests\obj\Debug\net7.0\Tests.pdb
 E:\work\projects\BinaryFile\Tests\obj\Debug\net7.0\Tests.genruntimeconfig.cache
 E:\work\projects\BinaryFile\Tests\obj\Debug\net7.0\ref\Tests.dll
+E:\work\projects\BinaryFile\Tests\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll

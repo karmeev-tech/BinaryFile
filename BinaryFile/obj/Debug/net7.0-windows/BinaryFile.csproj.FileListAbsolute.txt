@@ -27,4 +27,6 @@ E:\work\projects\BinaryFile\BinaryFile\obj\Debug\net7.0-windows\View\MainWindow.
 E:\work\projects\BinaryFile\BinaryFile\obj\Debug\net7.0-windows\View\MainPage.baml
 E:\work\projects\BinaryFile\BinaryFile\obj\Debug\net7.0-windows\View\MainWindow.baml
 E:\work\projects\BinaryFile\BinaryFile\obj\Debug\net7.0-windows\BinaryFile.csproj.CopyComplete
+E:\work\projects\BinaryFile\BinaryFile\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 E:\work\projects\BinaryFile\BinaryFile\bin\Debug\net7.0-windows\Microsoft.Extensions.Primitives.dll
+E:\work\projects\BinaryFile\BinaryFile\obj\Debug\net7.0-windows\BinaryFile_Content.g.cs

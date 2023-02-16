@@ -2,7 +2,6 @@
 
 namespace BinaryFile.VM
 {
-#nullable disable
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
