@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace BinaryModel
 {
     public class EntityService
@@ -30,8 +32,16 @@ namespace BinaryModel
             {
                 StringRepresentation = _provider.StringValue,
                 Bytes = _provider.GetProduct(),
-                Position = "0x" + BitConverter.ToString(BitConverter.GetBytes(position)).Replace("-","")
+                Position = "0x" + StringReverse(BitConverter.ToString(BitConverter.GetBytes(position)).Replace("-", ""))
             };
+        }
+
+        private string StringReverse(string str)
+        {
+            StringBuilder sb = new StringBuilder(str.Length);
+            for (int i = str.Length; i-- != 0;)
+                sb.Append(str[i]);
+            return sb.ToString();
         }
     }
 }
