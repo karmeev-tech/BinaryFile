@@ -8,6 +8,7 @@ namespace BinaryModel
         public byte[] _bytes = null!;
         public StringBuilder GetFile(string path, long position)
         {
+            if(path== null) return null;
             StringBuilder sb = new();
             using (var stream = File.Open(path, FileMode.Open))
             {
